@@ -1,33 +1,24 @@
-
 function salamAhvalPorse(robots) {
- 
-  if(robots==="salam mashti"){
-console.log(robots.slice(0,robots.indexOf(" ")))
-   }
-  
-  else if (robots === "whats up?") {
+  const sentence = robots.includes("salam");
+
+  if (sentence) {
+    console.log('salam');
+  } else if (robots === "whats up?") {
     console.log("all good");
-  } 
-  else if (robots === "where are you from?") {
+  } else if (robots === "where are you from?") {
     console.log(robots.slice(0, robots.indexOf(" ")));
-  }
- 
-  else if (robots === "how old are you?") {
+  } else if (robots === "how old are you?") {
     console.log("24");
-  } 
-  else if (robots === "whats your faverit color?") {
+  } else if (robots === "whats your faverit color?") {
     console.log("red");
-  } 
-  else if (robots === "whats your faverit movie?") {
+  } else if (robots === "whats your faverit movie?") {
     console.log(" Interstellar");
-  } 
-  else if (robots === "what your faverit food?") {
+  } else if (robots === "what your faverit food?") {
     console.log("kabak");
-  } 
-  else {
-    console.log(robots.slice(0, robots.indexOf(" "))||"undifine question");
+  } else if (!sentence) {
+    console.log("نمیذونم چی میگی");
+  } else {
+    console.log(robots.slice(0, robots.indexOf(" ")) || "undifine question");
   }
 }
 salamAhvalPorse("");
-
-
